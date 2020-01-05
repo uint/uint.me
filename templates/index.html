@@ -51,7 +51,8 @@
         <div class="content container">
             {% block content %}
                 <div class="posts">
-                    {% for page in section.pages | reverse %}
+                  {% set blog = get_section(path="blog/_index.md") %}
+                    {% for page in blog.pages | reverse %}
                       <div class="post">
                         <h1 class="post-title">
                           <a href="{{ page.permalink }}">

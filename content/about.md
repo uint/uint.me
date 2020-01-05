@@ -1,6 +1,5 @@
 +++
 title = "About me"
-date = 2020-01-05
 +++
 
 I'm a techy thing-doer. I do things. IT things. These things often involve

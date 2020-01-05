@@ -21,7 +21,7 @@ hyde_sticky = true
 hyde_reverse = true
 hyde_theme = "theme-base-0d"
 hyde_links = [
-    {url = "https://uint.me", name = "Blog"},
-    {url = "https://uint.me/pages/projects", name = "Projects"},
-    {url = "https://uint.me/pages/about", name = "About me"},
+    {url = "https://uint.me/blog", name = "Blog"},
+    {url = "https://uint.me/projects", name = "Projects"},
+    {url = "https://uint.me/about", name = "About me"},
 ]
