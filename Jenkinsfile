@@ -22,6 +22,10 @@ pipeline {
         }
 
         stage('Clean the current static website') {
+            when {
+                branch 'master'
+            }
+            
             steps {
                 sh "groups"
                 sh "rm -rf /var/www/uint.me/public_html"
@@ -29,6 +33,10 @@ pipeline {
         }
 
         stage('Deploy the static website') {
+            when {
+                branch 'master'
+            }
+
             steps {
                 sh "mv public /var/www/uint.me/public_html"
             }
