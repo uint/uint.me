@@ -52,17 +52,23 @@
             {% block content %}
                 <div class="posts">
                   {% set blog = get_section(path="blog/_index.md") %}
-                    {% for page in blog.pages | reverse %}
-                      <div class="post">
-                        <h1 class="post-title">
-                          <a href="{{ page.permalink }}">
-                            {{ page.title }}
-                          </a>
-                        </h1>
+                  {% for page in blog.pages | reverse %}
+                    <div class="post">
+                      <h1 class="post-title">
+                        <a href="{{ page.permalink }}">
+                          {{ page.title }}
+                        </a>
+                      </h1>
 
-                        <span class="post-date">{{ page.date | date(format="%Y-%m-%d") }}</span>
-                      </div>
-                    {% endfor %}
+                      <span class="post-date">{{ page.date | date(format="%Y-%m-%d") }}</span>
+                    </div>
+                  {% endfor %}
+
+                  {% if not blog.pages[0] %}
+                    <p>
+                      No blog posts yet.
+                    </p>
+                  {% endif %}
                 </div>
             {% endblock content %}
         </div>
