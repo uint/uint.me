@@ -14,7 +14,7 @@ build_search_index = true
 theme = "hyde"
 
 title = "uint.me"
-description = "Things and stuff."
+description = "geekery and geekishness"
 
 [extra]
 hyde_sticky = true
