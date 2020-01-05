@@ -7,7 +7,7 @@ I'm a techy thing-doer. I do things. IT things. These things often involve
 programming and automation.
 
 I love [Rust](https://rust-lang.org/). If you have any Rust things to do,
-please, please [contact me](mailto:uint@lavabit.com).
+do [contact me](mailto:uint@lavabit.com).
 
 ```rs
 enum Answer {
@@ -15,7 +15,7 @@ enum Answer {
     Maybe,
 }
 
-fn contact_uint(things_to_do: &[&str]) -> Answer {
+fn should_uint_be_contacted(things_to_do: &[&str]) -> Answer {
     match things_to_do.iter()
         .find(|s| s.contains("rust")){
             Some(_) => Answer::Yes,
