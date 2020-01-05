@@ -10,3 +10,18 @@ highlight_code = true
 
 # Whether to build a search index to be used later on by a JavaScript library
 build_search_index = true
+
+theme = "hyde"
+
+title = "uint.me"
+description = "Things, stuff and that."
+
+[extra]
+hyde_sticky = true
+hyde_reverse = true
+hyde_theme = "theme-base-0d"
+hyde_links = [
+    {url = "https://uint.me", name = "Blog"},
+    {url = "https://uint.me/pages/projects", name = "Projects"},
+    {url = "https://uint.me/pages/about", name = "About me"},
+]
