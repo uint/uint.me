@@ -27,3 +27,7 @@ hyde_links = [
     {url = "https://uint.me/projects", name = "Projects"},
     {url = "https://uint.me/about", name = "About me"},
 ]
+
+meta_description = "Tomasz Kurcz's special place. A techy blog and some info about the guy."
+meta_keywords = "Rust,Software,Blog,DevOps"
+meta_author = "Tomasz Kurcz"
