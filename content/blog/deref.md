@@ -1,6 +1,6 @@
 +++
 title = "Asterisks and dereferences and Derefs, oh my!"
-date = 2020-01-07
+date = 2020-01-12
 +++
 
 A few months back I read [the Book](https://doc.rust-lang.org/book/). Well,
@@ -25,7 +25,7 @@ a detail or two, or fall prey to wrong assumptions.
 
 One of those things for me was the whole why and how behind `Deref` coercion and
 `Deref` itself. I figured it might be worthwhile to compile all those bits
-you need to understand to start "getting" it. And so: here we are.
+you need to start "getting it." And so: here we are.
 
 # The `Deref` trait
 Like most traits, implementing `Deref` is simple. We only have to provide the
@@ -61,9 +61,8 @@ essentially, information about where to find a value. If `Deref` is implemented
 from type `T` to type `U`, then the logic `deref` describes is essentially this:
 
 Given information about where to find a value of type `T`, give me information
-about where to find the correspondent value of type `U`. What I'm going to do
-with this information and whether I'm going to try consuming anything is up to
-me, the user of the function.
+about where to find the correspondent value of type `U`. Whether this thing
+should be accessed and consumed is beyond the scope of this function.
 
 # The asterisk
 None of this would be complete without understanding how the `*` operator works.
@@ -77,7 +76,8 @@ When you use it on some value `x`, there are two possible cases:
   method. It's simply a basic, built-in dereference operation to access what the
   reference is pointing to.
 * `x` is not a primitive pointer type. In this case, `*x` ends up "translated" to
-  `*Deref::deref(&x)`. So we get our `&U` from `deref` and then dereference that
+  `*Deref::deref(&x)`. So (assuming `x` is of type `T` and `T` implements
+  `Deref<Target = U>`) we get our `&U` from `deref` and then dereference that
   to get a value of type `U`.
 
 Note that when I mention *primitive* pointer types, I don't mean smart pointers.
@@ -95,7 +95,7 @@ I will, however, encourage you to play around with the second case. Given our
 fn main() {
     let foo = Foo(String::from("42"));
         
-    let s: String = *foo; // *foo is equivalent to *Deref::deref(&foo)
+    let s: String = *foo; // `*foo` is equivalent to `*Deref::deref(&foo)`
 }
 ```
 
@@ -234,8 +234,37 @@ fn main() {
 `Deref` coercion applies to `DerefMut` as well. You can apply the same wizardry
 analogically to `&mut T` types if they implement `DerefMut<Target = U>`.
 
+```rs
+fn main() {
+    let mut foo = Foo(String::from("Bob"));
+    
+    hello(&mut foo); // `&mut Foo` gets coerced to `&mut String` here
+    
+    println!("{:?}", foo); // Foo("Hello, Bob!")
+}
+
+fn hello(s: &mut String) {
+    *s = format!("Hello, {}!", s);
+}
+```
+
 You can also take advantage of the fact a mutable reference `&mut T` will get
-coerced into an immutable reference `&T` in appropriate contexts.
+coerced into an immutable reference `&U` in appropriate contexts.
+
+```rs
+fn main() {
+    let mut foo = Foo(String::from("Bob"));
+    
+    prnt(&mut foo); // Bob
+}
+
+fn prnt(s: &str) {
+    println!("{}", s);
+}
+```
+
+Obviously, an immutable reference cannot be coerced into a mutable one!
+It's a one-way street.
 
 # Where to go next?
 For starters, here are some of my sources. They're all worth reviewing:
