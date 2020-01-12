@@ -27,5 +27,3 @@ Here's my
 * [CV](https://github.com/uint/cv/releases/download/latest/cv.pdf) *([source](https://github.com/uint/cv))*,
 * [LinkedIn](https://www.linkedin.com/in/tomasz-kurcz-a20828164/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BI1xnMC0ISt%2BEICWr8fYapQ%3D%3D&licu=urn%3Ali%3Acontrol%3Ad_flagship3_feed-nav.settings_view_profile), and
 * [GitHub](https://github.com/uint).
-
-I currently live in Poland, but I love moving about. In fact, I prefer it.
