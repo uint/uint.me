@@ -18,6 +18,7 @@
       <link rel="stylesheet" href="{{ get_url(path="print.css", trailing_slash=false) }}" media="print">
       <link rel="stylesheet" href="{{ get_url(path="poole.css", trailing_slash=false) }}">
       <link rel="stylesheet" href="{{ get_url(path="hyde.css", trailing_slash=false) }}">
+      <link rel="stylesheet" href="{{ get_url(path="rss.css", trailing_slash=false) }}">
       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
 
       {% if config.generate_rss %}
@@ -54,15 +55,21 @@
 
         <div class="content container">
             {% block content %}
+                <h1 class="post-title">Blog</h1>
+                {% if config.generate_rss %}
+                <ul class="feed-list">
+                  <li><a href="{{ get_url(path="rss.xml", trailing_slash=false) }}">All posts</a></li>
+                </ul> 
+                {% endif %}
                 <div class="posts">
                   {% set blog = get_section(path="blog/_index.md") %}
                   {% for page in blog.pages | reverse %}
                     <div class="post">
-                      <h1 class="post-title">
+                      <h2 class="post-title">
                         <a href="{{ page.permalink }}">
                           {{ page.title }}
                         </a>
-                      </h1>
+                      </h2>
 
                       <span class="post-date">{{ page.date | date(format="%Y-%m-%d") }}</span>
                     </div>
