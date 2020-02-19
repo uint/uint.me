@@ -21,6 +21,16 @@ pipeline {
             }
         }
 
+        stage('Build docker image') {
+            when {
+                branch 'master'
+            }
+
+            steps {
+                sh "docker build -t uint.me ."
+            }
+        }
+
         stage('Clean the current static website') {
             when {
                 branch 'master'
