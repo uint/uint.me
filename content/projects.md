@@ -5,9 +5,7 @@ title = "Projects"
 ### serbia
 [serbia](https://github.com/uint/serbia) is an attribute macro that helps work around
 [Serde](https://github.com/serde-rs/serde)'s limitation with regards to (de)serializing
-arrays of length larger than 32. Just slap `#[serbia]` on top of your struct/enum
-definitions and the right (de)serialization code will be automatically generated for
-all the fields that need it!
+arrays of length larger than 32.
 
 ### groupsync
 [groupsync](https://github.com/jamf/groupsync) is a tool for syncing
