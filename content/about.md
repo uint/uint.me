@@ -6,6 +6,9 @@ I love [Rust](https://rust-lang.org/). If you have any Rusty things to do,
 do [contact me](mailto:uint@lavabit.com). I'm looking for clients, commissions,
 contracts, part-time work, and so forth.
 
+I'm also looking to break into decentralized tech. I follow it keenly
+and understand blockchain fundamentals. Learning Substrate currently!
+
 ```rs
 enum Answer {
     Yes,
@@ -21,6 +24,5 @@ fn should_uint_be_contacted(things_to_do: &[&str]) -> Answer {
 ```
 
 Here's my
-* [CV](https://github.com/uint/cv/releases/download/latest/cv.pdf) *([source](https://github.com/uint/cv))*,
-* [LinkedIn](https://www.linkedin.com/in/tomasz-kurcz-a20828164/), and
+* [Mastodon](https://social.librem.one/@uint),
 * [GitHub](https://github.com/uint).
