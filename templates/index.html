@@ -63,7 +63,7 @@
                 {% endif %}
                 <div class="posts">
                   {% set blog = get_section(path="blog/_index.md") %}
-                  {% for page in blog.pages | reverse %}
+                  {% for page in blog.pages | sort(attribute="date") | reverse %}
                     <div class="post">
                       <h2 class="post-title">
                         <a href="{{ page.permalink }}">
