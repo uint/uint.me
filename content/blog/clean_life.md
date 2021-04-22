@@ -50,7 +50,7 @@ But afterwards you will still want to visit the carpenter. Deep down you know
 the blacksmith only applied a bandaid. You know true repair belongs to the appropriate
 specialist, and carpentry is not as simple as it seems.
 
-Experiencing a disaster after a disaster is not a sign everyone should get good at dousing
+Experiencing disaster after disaster is not a sign everyone should get good at dousing
 any kind of fire that could possibly happen. It is a sign there are deeper issues at play
 and life has gotten out of control.
 
