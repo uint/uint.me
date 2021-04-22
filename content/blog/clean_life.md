@@ -42,12 +42,12 @@ The only reason we may want it all is because we don't yet know what we want. Th
 enlightened few who gained that rare insight know they want for little.
 
 Societies evolved naturally to allow for outsourcing work. It not only makes us
-more efficient, but it also allows a group of people to truly be more than the
+more efficient, but also allows a group of people to truly be more than the
 sum of its parts.
 
 Can a blacksmith fix your house in a pinch to keep it from collapsing? Quite likely.
 But afterwards you will still want to visit the carpenter. Deep down you know
-the blacksmith only applied a bandaid, but true repair belongs to the appropriate
+the blacksmith only applied a bandaid. You know true repair belongs to the appropriate
 specialist, and carpentry is not as simple as it seems.
 
 Experiencing a disaster after a disaster is not a sign everyone should get good at dousing
