@@ -9,14 +9,17 @@ compile_sass = true
 highlight_code = true
 
 # Whether to build a search index to be used later on by a JavaScript library
-build_search_index = true
+# build_search_index = true
 
-generate_rss = true
+#generate_rss = true
 
 theme = "hyde"
 
 title = "uint.me"
 description = "software development"
+
+[markdown]
+smart_punctuation = true
 
 [extra]
 hyde_sticky = true

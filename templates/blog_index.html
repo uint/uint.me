@@ -1,0 +1,30 @@
+{% extends "main.html" %}
+
+{% block content %}
+<h1 class="post-title">Blog</h1>
+{% if config.generate_rss %}
+<ul class="feed-list">
+  <li><a href="{{ get_url(path="rss.xml", trailing_slash=false) }}">All posts</a></li>
+</ul>
+{% endif %}
+<div class="posts">
+  {% set blog = get_section(path="blog/_index.md") %}
+  {% for page in blog.pages | sort(attribute="date") | reverse %}
+  <div class="post">
+    <h2 class="post-title">
+      <a href="{{ page.permalink }}">
+        {{ page.title }}
+      </a>
+    </h2>
+
+    <span class="post-date">{{ page.date | date(format="%Y-%m-%d") }}</span>
+  </div>
+  {% endfor %}
+
+  {% if not blog.pages[0] %}
+  <p>
+    No blog posts yet.
+  </p>
+  {% endif %}
+</div>
+{% endblock content %}
