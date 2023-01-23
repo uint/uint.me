@@ -16,19 +16,19 @@ generate_rss = true
 theme = "hyde"
 
 title = "uint.me"
-description = "geekery and geekishness"
+description = "software development"
 
 [extra]
 hyde_sticky = true
 hyde_reverse = true
 hyde_theme = "theme-base-0d"
 hyde_links = [
-    {url = "$BASE_URL/blog", name = "Blog"},
-    {url = "$BASE_URL/projects", name = "Projects"},
+    # {url = "$BASE_URL/blog", name = "Blog"},
+    {url = "$BASE_URL/services", name = "Services"},
+    {url = "$BASE_URL/experience", name = "Experience"},
     {url = "$BASE_URL/links", name = "Links"},
-    {url = "$BASE_URL/about", name = "About me"},
 ]
 
-meta_description = "Tomasz Kurcz's special place. A techy blog and some info about the guy."
-meta_keywords = "Rust,Software,Blog,DevOps"
+meta_description = "Tomasz Kurcz software development"
+meta_keywords = "Rust,Software,Blockchain,CosmWasm"
 meta_author = "Tomasz Kurcz"

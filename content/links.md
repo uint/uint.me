@@ -2,10 +2,6 @@
 title = "Links"
 +++
 
-## Rust
-* [The Book](https://doc.rust-lang.org/book/)
-* [This Week in Rust](https://this-week-in-rust.org/)
-* [The Little Book of Rust Macros](https://danielkeep.github.io/tlborm/book/index.html)
-
-## Friends
-* [TurtleWare](http://turtleware.eu/)
+- [GitHub](https://github.com/uint)
+- [e-mail](mailto:website@uint.me)
+- [LinkedIn](https://www.linkedin.com/in/tomasz-kurcz-a20828164/)
