@@ -1,0 +1,17 @@
+<script src="minichat-client/flutter.js" defer></script>
+<div id="flutter_host" style="display:block; height: 400px;">Loading...</div>
+<script>
+  window.addEventListener("load", function (ev) {
+      _flutter.loader.loadEntrypoint({
+          entrypointUrl: "minichat-client/main.dart.js",
+          onEntrypointLoaded: async function(engineInitializer) {
+              let appRunner = await engineInitializer.initializeEngine({
+                  // Pass a reference to "div#flutter_host" into the Flutter engine.
+                  assetBase: "minichat-client/",
+                  hostElement: document.querySelector("#flutter_host"),
+              });
+              await appRunner.runApp();
+          }
+      });
+  });
+</script>

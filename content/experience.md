@@ -5,6 +5,13 @@ title = "Experience"
 Below, you can glean some projects I dabbled in. Feel free to also check out my
 [GitHub](https://github.com/uint).
 
+### _mini-chat_
+
+[_mini-chat_](https://github.com/uint/mini-chat) is a simple chat app built
+using async Rust, Flutter and WebSockets.
+
+{{ minichat() }}
+
 ### _jtd-derive_
 
 [_jtd-derive_](https://github.com/uint/jtd-derive) is a tool for producing
