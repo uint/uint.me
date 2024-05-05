@@ -27,9 +27,9 @@ enabling advanced developer tooling and generic clients.
 
 ### _CosmWasm_
 
-Over a year of work as a core maintainer of the
-[_CosmWasm_](https://cosmwasm.com/) execution engine and framework. This is the
-thing that enables smart contracts on many Cosmos blockchains.
+Long-term work as a core maintainer of the [_CosmWasm_](https://cosmwasm.com/)
+execution engine and framework. This is the thing that enables smart contracts
+on many Cosmos blockchains.
 
 The GitHub repo can be viewed [here](https://github.com/CosmWasm/cosmwasm).
 

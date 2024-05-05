@@ -20,13 +20,14 @@ description = "software development"
 
 [markdown]
 smart_punctuation = true
+highlight_code = true
 
 [extra]
 hyde_sticky = true
 hyde_reverse = true
 hyde_theme = "theme-base-0d"
 hyde_links = [
-    # {url = "$BASE_URL/blog", name = "Blog"},
+    {url = "$BASE_URL/blog", name = "Blog"},
     {url = "$BASE_URL/services", name = "Services"},
     {url = "$BASE_URL/experience", name = "Experience"},
     {url = "$BASE_URL/links", name = "Links"},
