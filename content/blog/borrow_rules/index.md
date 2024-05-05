@@ -1,8 +1,7 @@
 +++
 title = "Rust's borrow rules: but why, really?"
 description = "An explanation of what problems Rust's borrow rules prevent"
-date = 2024-05-03
-draft = true
+date = 2024-05-05
 +++
 
 {{ youtube(id="KVwP6nY4xgA") }}
@@ -18,7 +17,7 @@ Any code that violates these rules will not compile.
 
 ## The Book sayeth...
 
-According to the one and only [Book](https://doc.rust-lang.org/book/), the
+According to [*The Rust Programming Language*](https://doc.rust-lang.org/book/), the
 reason for these limitations is to prevent data races (see
 [here](https://doc.rust-lang.org/stable/book/ch04-02-references-and-borrowing.html?highlight=data%20races#mutable-references)).
 
@@ -117,7 +116,7 @@ numbers. The old data (`1, 2, 3`) is copied there, and `4` is appended.
 
 {{ bgimg(src="4.svg") }}
 
-The vector data on the stack is updated - capacity and length both just changed.
+The vector data on the stack is updated - the pointer, capacity and length all just changed.
 
 {{ bgimg(src="5.svg") }}
 
@@ -148,5 +147,5 @@ Let's borrow
 > optimize programs.
 
 In Rust, having multiple references around is a form of aliasing. The borrow
-checker, then, is a mechanism that helps prevent nasty problems that might
-commonly arise from it.
+checker, then, is a mechanism that helps prevent nasty problems that tend to
+come with this territory.
